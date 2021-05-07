@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import useDialog from '../hooks/useDialog';
 import Exclusion from './Exclusion';
-// import { Ellipsis } from 'react-spinners-css';
+import { Ellipsis } from 'react-spinners-css';
 
 const Disease = () => {
   const { disease } = useParams();
@@ -23,7 +23,7 @@ const Disease = () => {
   return (
     <div className="center d-flex flex-column">
       {error && <div>{error}</div>}
-      {isPending && <div>{/* <Ellipsis color="#be97e8" /> */}</div>}
+      {isPending && <div><Ellipsis color="#be97e8" /></div>}
       {qa && (
         <h1 className="p-3 default header center w-100">
           {qa[0].question.toUpperCase()}

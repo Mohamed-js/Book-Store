@@ -10,7 +10,7 @@ const Symptoms = () => {
   const browser = useHistory();
   const dispatch = useDispatch();
   const [symptoms, setSymptoms] = useState([]);
-  const { qa, isPending, error } = useSymptoms(`s-${disease}`);
+  const { qa, isPending, error } = useSymptoms(`${disease}`);
 
   // Redirect to result
   const saveSymptoms = () => {

@@ -33,3 +33,16 @@ const useDialog = (q) => {
 };
 
 export default useDialog;
+
+// fetch(
+//   `https://shrouded-eyrie-30928.herokuapp.com/https://diagnoser-api.herokuapp.com/apico/v1/questions/get/s-cold`,
+//   {
+//     method: 'get',
+//     headers: { 'Content-Type': 'application/json' },
+//   }
+// ).then((res) => {
+//     if (!res.ok) {
+//       throw Error("couldn't fetch");
+//     }
+//     return res.json();
+//   })

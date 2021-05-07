@@ -16,11 +16,6 @@ const Result = () => {
   query = addHistory(result, query);
   query = addDiseases(result, query);
 
-  // for (let i = 0; i < symptoms.length; i += 1) {
-  //   const fQuery = query + `AND indications LIKE '%${symptoms[i]}%'`;
-  //   const { qa } = useApi({ query: fQuery });
-  //   drugs.push([qa]);
-  // }
   symptoms.forEach((x) => {
     const fQuery = query + `AND indications LIKE '%${x}%'`;
     /* eslint-disable-next-line */
