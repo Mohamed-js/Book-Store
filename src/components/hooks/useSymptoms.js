@@ -7,7 +7,10 @@ const useSymptoms = (q) => {
 
   useEffect(() => {
     fetch(
-      `https://shrouded-eyrie-30928.herokuapp.com/https://diagnoser-api.herokuapp.com/apico/v1/symptoms/get/${q}.json`
+      `https://shrouded-eyrie-30928.herokuapp.com/https://diagnoser-api.herokuapp.com/apico/v1/symptoms/get/${q}.json`,
+      {
+        headers: { 'Content-Type': 'application/json' },
+      }
     )
       .then((res) => {
         if (!res.ok) {

@@ -6,10 +6,13 @@ const useDialog = (q) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://diagnoser-api.herokuapp.com/apico/v1/questions/get/${q}`, {
-      method: 'get',
-      headers: { 'Content-Type': 'application/json' },
-    })
+    fetch(
+      `https://shrouded-eyrie-30928.herokuapp.com/https://diagnoser-api.herokuapp.com/apico/v1/questions/get/${q}`,
+      {
+        method: 'get',
+        headers: { 'Content-Type': 'application/json' },
+      }
+    )
       .then((res) => {
         if (!res.ok) {
           throw Error("couldn't fetch");

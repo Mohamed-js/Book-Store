@@ -6,7 +6,7 @@ import Male from './Male';
 import '../../assets/stylesheets/app.css';
 import '../../assets/stylesheets/history.css';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const History = () => {
   const dispatch = useDispatch();

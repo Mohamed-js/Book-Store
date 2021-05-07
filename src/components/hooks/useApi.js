@@ -6,11 +6,14 @@ const useApi = (query = {}) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://diagnoser-api.herokuapp.com/apico/v1/questions/get.json`, {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(query),
-    })
+    fetch(
+      `https://shrouded-eyrie-30928.herokuapp.com/https://diagnoser-api.herokuapp.com/apico/v1/questions/get.json`,
+      {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(query),
+      }
+    )
       .then((res) => {
         if (!res.ok) {
           throw Error("couldn't fetch");
@@ -25,6 +28,7 @@ const useApi = (query = {}) => {
         setIsPending(false);
         setError(err.message);
       });
+    // eslint-disable-next-line
   }, []);
 
   return { qa, isPending, error };
