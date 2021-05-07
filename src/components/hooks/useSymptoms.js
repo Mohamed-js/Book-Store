@@ -6,7 +6,9 @@ const useSymptoms = (q) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://diagnoser-api.herokuapp.com/apico/v1/symptoms/get/${q}.json`)
+    fetch(
+      `https://shrouded-eyrie-30928.herokuapp.com/https://diagnoser-api.herokuapp.com/apico/v1/symptoms/get/${q}.json`
+    )
       .then((res) => {
         if (!res.ok) {
           throw Error("couldn't fetch");
