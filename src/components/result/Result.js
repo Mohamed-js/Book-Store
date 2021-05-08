@@ -16,15 +16,15 @@ const Result = () => {
   query = addHistory(result, query);
   query = addDiseases(result, query);
 
-  symptoms.forEach((x) => {
-    const fQuery = query + `AND indications LIKE '%${x}%'`;
-    /* eslint-disable-next-line */
-    const { qa } = useApi({ query: fQuery });
-    drugs.push([qa]);
-  });
-
+  if (symptoms) {
+    symptoms.forEach((x) => {
+      const fQuery = query + `AND indications LIKE '%${x}%'`;
+      /* eslint-disable-next-line */
+      const { qa } = useApi({ query: fQuery });
+      drugs.push([qa]);
+    });
+  }
   drugs = processDrugs(drugs);
-
   const categories = [];
 
   if (drugs[0]) {

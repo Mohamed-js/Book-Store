@@ -17,13 +17,18 @@ const Disease = () => {
       browser.push('/refer/' + val[1]);
     }
     // another question
+
     setQuestion(val[3]);
   };
-  const { qa, isPending, error } = useDialog(question);
+  let { qa, isPending, error } = useDialog(question);
   return (
     <div className="center d-flex flex-column">
       {error && <div>{error}</div>}
-      {isPending && <div><Ellipsis color="#be97e8" /></div>}
+      {isPending && (
+        <div>
+          <Ellipsis color="#be97e8" />
+        </div>
+      )}
       {qa && (
         <h1 className="p-3 default header center w-100">
           {qa[0].question.toUpperCase()}
