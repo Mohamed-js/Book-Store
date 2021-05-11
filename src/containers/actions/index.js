@@ -1,5 +1,9 @@
-const STORE_HISTORY = () => {
-  return {
-    type: 'STORE_HISTORY',
-  };
-};
+const CREATE_BOOK = (book) => ({
+  type: 'CREATE_BOOK',
+  book,
+});
+
+const REMOVE_BOOK = (book) => ({
+  type: 'REMOVE_BOOK',
+  book,
+});
