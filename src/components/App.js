@@ -9,7 +9,7 @@ function App(props) {
 }
 
 App.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string
 };
 
 export default App;
