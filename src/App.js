@@ -1,18 +1,12 @@
-import { Provider } from 'react-redux';
-import BooksList from './components/BooksList';
-import BooksForm from './components/BooksForm';
-import store from './containers/store';
+import BooksList from './containers/BooksList';
+import BooksForm from './containers/BooksForm';
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <div>
-          <BooksList />
-          <BooksForm />
-        </div>
-      </div>
-    </Provider>
+    <div className="App">
+      <BooksList />
+      <BooksForm />
+    </div>
   );
 }
 
