@@ -16,4 +16,8 @@ App.propTypes = {
   name: PropTypes.string,
 };
 
+App.defaultProps = {
+  name: 'world',
+};
+
 export default App;
