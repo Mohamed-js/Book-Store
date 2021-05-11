@@ -4,7 +4,7 @@ import App from './components/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App name="world" />
   </React.StrictMode>,
   document.getElementById('root')
 );
