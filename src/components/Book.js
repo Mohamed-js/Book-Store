@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  // eslint-disable-next-line
-  const { id, title, category, handleClick } = props;
+  const {
+    id, title, category, handleClick,
+  } = props;
 
   return (
     <tr>

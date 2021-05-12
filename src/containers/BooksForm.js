@@ -15,7 +15,8 @@ const BooksForm = () => {
     setBook({ ...book, [name]: value });
   };
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     // Add the book
     dispatch(
       CREATE_BOOK({ ...book, id: `${Math.floor(Math.random() * 100)}` }),
@@ -40,8 +41,13 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
   return (
-    <form className="form" id="form">
-      <input name="title" placeholder="Title" onChange={handleChange} />
+    <form className="form" id="form" onSubmit={handleClick}>
+      <input
+        name="title"
+        placeholder="Title"
+        onChange={handleChange}
+        required
+      />
       <select name="category" onChange={handleChange}>
         {options.map((option) => (
           <option key={Math.random()} value={option}>
@@ -49,9 +55,7 @@ const BooksForm = () => {
           </option>
         ))}
       </select>
-      <button type="button" onClick={handleClick}>
-        ADD
-      </button>
+      <button type="submit">ADD</button>
     </form>
   );
 };
