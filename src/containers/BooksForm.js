@@ -52,7 +52,7 @@ const BooksForm = () => {
           onChange={handleChange}
           required
         />
-        <select onChange={handleChange} value={book.category}>
+        <select id="category" name="category" onChange={handleChange}>
           {options.map((option) => (
             <option key={Math.random()} value={option}>
               {option}
