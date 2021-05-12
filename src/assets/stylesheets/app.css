@@ -7,6 +7,7 @@
 .App {
   background-color: #fafafa;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -88,6 +89,7 @@
   border-radius: 4px;
   padding: 27px 32px;
 }
+
 .form {
   margin: auto;
   max-width: 1050px;
@@ -96,15 +98,20 @@
   justify-content: space-between;
 }
 
+input {
+  width: 100%;
+  padding: 8px;
+}
+
+select {
+  color: rgb(168, 168, 168);
+}
+
 .form button,
 .form select,
 .form input {
   border: rgb(218, 218, 218) solid 1px;
   border-radius: 4px;
-}
-
-.form select {
-  color: rgb(168, 168, 168);
 }
 
 .form input::placeholder {
@@ -125,15 +132,10 @@
 
 .form-holder,
 .form-holder h1 {
-  color: #888888;
+  color: #888;
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 10px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
 }
 
 hr.form {
