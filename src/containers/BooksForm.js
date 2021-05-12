@@ -17,7 +17,9 @@ const BooksForm = () => {
 
   const handleClick = () => {
     // Add the book
-    dispatch(CREATE_BOOK({ ...book, id: Math.floor(Math.random() * 100) }));
+    dispatch(
+      CREATE_BOOK({ ...book, id: `${Math.floor(Math.random() * 100)}` }),
+    );
     // Reset state
     setBook({
       id: '',
