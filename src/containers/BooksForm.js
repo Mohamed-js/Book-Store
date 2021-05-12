@@ -7,7 +7,7 @@ const BooksForm = () => {
   const [book, setBook] = useState({
     id: '',
     title: '',
-    category: 'Action',
+    category: '',
   });
 
   const handleChange = (e) => {
@@ -25,7 +25,7 @@ const BooksForm = () => {
     setBook({
       id: '',
       title: '',
-      category: 'Action',
+      category: '',
     });
     // Reset inputs
     document.getElementById('form').reset();
@@ -52,7 +52,7 @@ const BooksForm = () => {
           onChange={handleChange}
           required
         />
-        <select name="category" onChange={handleChange} required>
+        <select id="category" name="category" onChange={handleChange}>
           {options.map((option) => (
             <option key={Math.random()} value={option}>
               {option}
