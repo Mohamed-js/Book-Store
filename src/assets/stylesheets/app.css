@@ -142,3 +142,11 @@ hr.form {
   margin: 30px auto;
   border: rgb(236, 236, 236) 1px solid;
 }
+
+.row select {
+  width: 100%;
+  border: rgb(218, 218, 218) solid 1px;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+}
