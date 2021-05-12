@@ -11,7 +11,7 @@ In this project:
 - Made all necessary functions to make in add and remove books.
 - Styled the component with css.
 
-<!-- ## Live Demo -->
+## Live Demo
 
 [LIVE!](https://bookstore-atef.herokuapp.com/)
 
