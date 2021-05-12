@@ -2,21 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const {
-    id, title, category, handleClick,
-  } = props;
+  // eslint-disable-next-line
+  const { id, title, category, handleClick } = props;
 
   return (
-    <tr>
-      <td>{id}</td>
-      <td>{title}</td>
-      <td>{category}</td>
-      <td>
-        <button type="button" value={id} onClick={handleClick}>
+    <div className="book">
+      <p className="b-category">{category}</p>
+      <p className="b-title">{title}</p>
+      <p className="f-blue">Mohamed Atef</p>
+      <div className="btns">
+        <button type="button" className="f-blue btn">
+          Comments
+        </button>
+        |
+        <button
+          className="f-blue btn"
+          type="button"
+          value={id}
+          onClick={handleClick}
+        >
           Remove
         </button>
-      </td>
-    </tr>
+        |
+        <button type="button" className="f-blue btn">
+          Edit
+        </button>
+      </div>
+    </div>
   );
 };
 

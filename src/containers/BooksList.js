@@ -12,27 +12,17 @@ const BooksList = () => {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        {books.map((book) => (
-          <Book
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            category={book.category}
-            handleClick={handleClick}
-          />
-        ))}
-      </tbody>
-    </table>
+    <div className="books">
+      {books.map((book) => (
+        <Book
+          key={book.id}
+          id={book.id}
+          title={book.title}
+          category={book.category}
+          handleClick={handleClick}
+        />
+      ))}
+    </div>
   );
 };
 
