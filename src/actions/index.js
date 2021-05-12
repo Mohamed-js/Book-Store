@@ -8,9 +8,9 @@ const REMOVE_BOOK = (bookid) => ({
   bid: bookid,
 });
 
-const FILTER_BOOK = (filter) => ({
-  type: 'FILTER_BOOK',
-  payload: filter,
+const CHANGE_FILTER = (filter) => ({
+  type: 'CHANGE_FILTER',
+  category: filter,
 });
 
-export { CREATE_BOOK, REMOVE_BOOK, FILTER_BOOK };
+export { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER };

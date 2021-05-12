@@ -32,6 +32,7 @@ const BooksForm = () => {
   };
 
   const options = [
+    'Category',
     'Action',
     'Biography',
     'History',
@@ -41,22 +42,26 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
   return (
-    <form className="form" id="form" onSubmit={handleClick}>
-      <input
-        name="title"
-        placeholder="Title"
-        onChange={handleChange}
-        required
-      />
-      <select name="category" onChange={handleChange}>
-        {options.map((option) => (
-          <option key={Math.random()} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-      <button type="submit">ADD</button>
-    </form>
+    <div className="form-holder">
+      <hr className="form" />
+      <h1 className="form">ADD NEW BOOK</h1>
+      <form className="form" id="form" onSubmit={handleClick}>
+        <input
+          name="title"
+          placeholder="Title"
+          onChange={handleChange}
+          required
+        />
+        <select name="category" onChange={handleChange} required>
+          {options.map((option) => (
+            <option key={Math.random()} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+        <button type="submit">ADD BOOK</button>
+      </form>
+    </div>
   );
 };
 
