@@ -7,9 +7,21 @@ import reducer from './reducers';
 
 const InitialState = {
   books: [
-    { id: 1, title: 'The Jungle', category: 'Action' },
-    { id: 2, title: 'The Mummy', category: 'History' },
-    { id: 3, title: 'Baby Shark', category: 'Kids' },
+    {
+      id: `${Math.floor(Math.random() * 100)}`,
+      title: 'The Jungle',
+      category: 'Action',
+    },
+    {
+      id: `${Math.floor(Math.random() * 100)}`,
+      title: 'The Mummy',
+      category: 'History',
+    },
+    {
+      id: `${Math.floor(Math.random() * 100)}`,
+      title: 'Baby Shark',
+      category: 'Kids',
+    },
   ],
 };
 

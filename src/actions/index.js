@@ -1,11 +1,16 @@
-// eslint-disable-next-line
 const CREATE_BOOK = (book) => ({
   type: 'CREATE_BOOK',
-  book,
+  payload: book,
 });
 
-// eslint-disable-next-line
-const REMOVE_BOOK = (book) => ({
+const REMOVE_BOOK = (bookid) => ({
   type: 'REMOVE_BOOK',
-  book,
+  bid: bookid,
 });
+
+const FILTER_BOOK = (filter) => ({
+  type: 'FILTER_BOOK',
+  payload: filter,
+});
+
+export { CREATE_BOOK, REMOVE_BOOK, FILTER_BOOK };
